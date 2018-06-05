@@ -1,0 +1,462 @@
+/*
+    * This is a very minimal custom CSS framework.
+    * The top section is a CSS reset
+    * To place more than one item into a row without using float or inline-block simply
+    add the class "flex" to the parent container
+    * You can also use flex-spread, flex-wrap, etc
+    * The rest of the framework is simply to quickly add responsive widths to elements
+    * DW = Desktop Width
+    * LW = Laptop Width
+    * TW = Tablet Width
+    * MW = Mobile Width
+    * If you want a div to be 65% on desktop, 80% on tablet and 100% on mobile you would simple say
+    <div class="dw-65 tw-80 mw-100"></div>
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin:  0;
+    padding: 0;
+    border:  0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height:     1;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top:    0;
+    margin-bottom: 5px;
+    line-height:   1;
+}
+
+a {
+    text-decoration: none;
+    display:         table;
+}
+
+p, li, a, h1, h2, h3, th, td, label {
+    text-align: left;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing:  0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+i[class*='ion-'] {
+    transform: scale(1.5);
+    padding:   0 5px 0 5px;
+    display:   inline-block;
+    &.hamburger {
+        display: none;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// HELPER CLASSES
+.img-cont {
+    img {
+        max-width:  100%;
+        max-height: 100%;
+    }
+}
+
+.desktop-center {
+    margin:  0 auto;
+    display: block !important;
+}
+
+.hide-on-desktop {
+    display: none;
+}
+
+// Main grid container
+.grid-cont {
+    max-width: 1140px;
+    margin:    0 auto;
+    width:     95%;
+    overflow:  hidden;
+}
+
+// For slide-in effects
+.slide-in-grid-cont {
+    max-width: 1140px;
+    margin:    0 auto;
+    width:     95%;
+}
+
+// Container for multiple columns
+.flex {
+    display:         flex;
+}
+
+.flex-wrap {
+    display:         flex;
+    flex-wrap: wrap;
+}
+
+.flex-spread {
+    display:         flex;
+    justify-content: space-between;
+}
+
+.flex-spread-wrap {
+    display:         flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+// DESKTOP COLUMN WIDTHS
+.dw-5 {
+    width: 5%;
+}
+
+.dw-10 {
+    width: 10%;
+}
+
+.dw-15 {
+    width: 15%;
+}
+
+.dw-20 {
+    width: 20%;
+}
+
+.dw-25 {
+    width: 25%;
+}
+
+.dw-30 {
+    width: 30%
+}
+
+.dw-35 {
+    width: 35%;
+}
+
+.dw-40 {
+    width: 40%;
+}
+
+.dw-45 {
+    width: 45%;
+}
+
+.dw-50 {
+    width: 50%;
+}
+
+.dw-55 {
+    width: 55%;
+}
+
+.dw-60 {
+    width: 60%;
+}
+
+.dw-65 {
+    width: 65%;
+}
+
+.dw-70 {
+    width: 70%;
+}
+
+.dw-75 {
+    width: 75%;
+}
+
+.dw-80 {
+    width: 80%;
+}
+
+.dw-85 {
+    width: 85%;
+}
+
+.dw-90 {
+    width: 90%;
+}
+
+.dw-95 {
+    width: 95%;
+}
+
+.dw-100 {
+    width: 100%;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1100px) {
+    .grid-cont {
+        width: 95%;
+    }
+    // LAPTOP COLUMN WIDTHS
+    .lw-5 {
+        width: 5%;
+    }
+    .lw-10 {
+        width: 10%;
+    }
+    .lw-15 {
+        width: 15%;
+    }
+    .lw-20 {
+        width: 20%;
+    }
+    .lw-25 {
+        width: 25%;
+    }
+    .lw-30 {
+        width: 30%;
+    }
+    .lw-35 {
+        width: 35%;
+    }
+    .lw-40 {
+        width: 40%;
+    }
+    .lw-45 {
+        width: 45%;
+    }
+    .lw-50 {
+        width: 50%;
+    }
+    .lw-55 {
+        width: 55%;
+    }
+    .lw-60 {
+        width: 60%;
+    }
+    .lw-65 {
+        width: 65%;
+    }
+    .lw-70 {
+        width: 70%;
+    }
+    .lw-75 {
+        width: 75%;
+    }
+    .lw-80 {
+        width: 80%;
+    }
+    .lw-85 {
+        width: 85%;
+    }
+    .lw-90 {
+        width: 90%;
+    }
+    .lw-95 {
+        width: 95%;
+    }
+    .lw-100 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    // TABLET ONLY HELPER CLASSES
+    .tablet-center {
+        margin:  0 auto;
+        display: block;
+    }
+    .hide-on-tablet {
+        display: none;
+    }
+    .hide-on-desktop {
+        display: block
+    }
+
+    // TABLET COLUMN WIDTHS
+    .tw-5 {
+        width: 5%;
+    }
+    .tw-10 {
+        width: 10%;
+    }
+    .tw-15 {
+        width: 15%;
+    }
+    .tw-20 {
+        width: 20%;
+    }
+    .tw-25 {
+        width: 25%;
+    }
+    .tw-30 {
+        width: 30%;
+    }
+    .tw-35 {
+        width: 35%;
+    }
+    .tw-40 {
+        width: 40%;
+    }
+    .tw-45 {
+        width: 45%;
+    }
+    .tw-50 {
+        width: 50%;
+    }
+    .tw-55 {
+        width: 55%;
+    }
+    .tw-60 {
+        width: 60%;
+    }
+    .tw-65 {
+        width: 65%;
+    }
+    .tw-70 {
+        width: 70%;
+    }
+    .tw-75 {
+        width: 75%;
+    }
+    .tw-80 {
+        width: 80%;
+    }
+    .tw-85 {
+        width: 85%;
+    }
+    .tw-90 {
+        width: 90%;
+    }
+    .tw-95 {
+        width: 95%;
+    }
+    .tw-100 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    [class*="dw-"], [class*="tw-"] {
+        width: 100%;
+    }
+    // MOBILE ONLY HELPER CLASSES
+    .hide-on-mobile {
+        display: none;
+    }
+    // MOBILE COLUMN WIDTHS
+    .mw-5 {
+        width: 5%;
+    }
+
+    .mw-10 {
+        width: 10%;
+    }
+
+    .mw-15 {
+        width: 15%;
+    }
+
+    .mw-20 {
+        width: 20%;
+    }
+
+    .mw-25 {
+        width: 25%;
+    }
+
+    .mw-30 {
+        width: 30%
+    }
+
+    .mw-35 {
+        width: 35%;
+    }
+
+    .mw-40 {
+        width: 40%;
+    }
+
+    .mw-45 {
+        width: 45%;
+    }
+
+    .mw-50 {
+        width: 50%;
+    }
+
+    .mw-55 {
+        width: 55%;
+    }
+
+    .mw-60 {
+        width: 60%;
+    }
+
+    .mw-65 {
+        width: 65%;
+    }
+
+    .mw-70 {
+        width: 70%;
+    }
+
+    .mw-75 {
+        width: 75%;
+    }
+
+    .mw-80 {
+        width: 80%;
+    }
+
+    .mw-85 {
+        width: 85%;
+    }
+
+    .mw-90 {
+        width: 90%;
+    }
+
+    .mw-95 {
+        width: 95%;
+    }
+
+    .mw-100 {
+        width: 100%;
+    }
+}
